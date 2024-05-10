@@ -2,17 +2,15 @@ type QNode<T> = {
   value: T,
   next?: QNode<T>, //next may or may not exist
 }
+
 export default class Queue<T> {
   public length: number;
   private head?: QNode<T>;
   private tail?: QNode<T>;
 
-    
-
   constructor() {
     this.head = this.tail = undefined;
     this.length = 0;
-
   }
 
   enqueue(item: T): void {
